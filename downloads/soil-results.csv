@@ -1,0 +1,4 @@
+sample,system_temperature_C,lab_temperature_C,system_moisture_percent,lab_moisture_percent,system_ph,lab_ph,system_ec_uS_cm,lab_ec_uS_cm,source,notes
+Urban soil,20.2,20.5,43.4,45,6.6,6.8,90,95,"Final report, September 2026, p7 Table6",
+Forest soil,20.8,20.2,23.1,23.5,9,8.8,0,0,"Final report, September 2026, p7 Table6",Zero EC is the recorded reading; it should not be interpreted as proof that the soil contains no ions.
+Potted soil,20.7,21.1,19.3,18.6,4.8,5,0,0,"Final report, September 2026, p7 Table6",Zero EC is the recorded reading; it should not be interpreted as proof that the soil contains no ions.

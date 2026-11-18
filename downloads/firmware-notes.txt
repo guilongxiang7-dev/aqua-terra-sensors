@@ -1,0 +1,25 @@
+AQUA / TERRA — FIRMWARE NOTES
+Guilong Xiang
+
+WATER SYSTEM
+Nano-compatible ATmega328P controller.
+DHT11 data D2; DS18B20 data D3 with 4.7 kOhm pull-up; TDS A0; optical voltage A1; serial pH D8/D9; OLED SDA A4, SCL A5.
+Dependencies: Arduino core, Wire, SoftwareSerial, U8g2, DHT sensor library, OneWire, DallasTemperature. Some DHT library installations also need Adafruit Unified Sensor.
+The archived pH sketch tries both D8/D9 serial orientations at 9600 baud. Verify the module pin labels and electrical requirements against its own documentation.
+The TDS routine takes 30 ADC samples, uses median filtering and temperature compensation, and caps its numeric output at 1400 ppm. The original display prints 1400, without an explicit >= marker. The website uses the report's >=1400 notation for the lemon-water record; this is a censored lower bound, not an exact concentration.
+Optical sensor output remains voltage. It is not calibrated turbidity in NTU.
+
+SOIL SYSTEM
+Nano-compatible ATmega328P; SN-3001-TR four-in-one probe; automatic-direction TTL-RS485 converter; SSD1306 OLED.
+Converter TXD to D8 (controller RX), RXD to D9 (controller TX); probe A/B to converter A/B; OLED SDA A4, SCL A5.
+Modbus RTU: 4800 baud, address 1, function 0x03, registers 0x0000–0x0003. Moisture 0.1%, signed temperature 0.1 degC, EC 1 microS/cm, pH 0.1 unit. The programme validates CRC-16 and filters changes before display.
+Dependencies: Arduino core, Wire, SoftwareSerial, U8g2. Check the actual probe supply rating. The documented project wiring uses 5 V; this does not establish the supply requirements of another probe sold under a similar name.
+
+DATA PROVENANCE AND INTERPRETATION
+Primary values: final report Tables 6, 9, 11 and 12. Statistics: Tables 7 and 10.
+Lemon-water optical voltage: report Table 12 = 3.20 V; final poster Table 4 = 4.20 V. The website follows the report and exposes this discrepancy.
+The report's TDS analysis includes five pairs, including the salt-water reading of 1400 ppm at the display ceiling. Lemon water is excluded. The boundary reading should not be treated as conclusively uncensored.
+Printed material rows total CNY 0.01 less than the report's combined totals. Original reported totals are retained.
+The sample set is small. A non-significant paired t-test does not prove equivalence or performance outside the tested samples.
+
+Original documents remain available in this archive for direct inspection.

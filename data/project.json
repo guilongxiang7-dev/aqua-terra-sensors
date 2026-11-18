@@ -1,0 +1,959 @@
+{
+  "title": "Development of Low-Cost Water & Soil Sensor Systems",
+  "author": "Guilong Xiang",
+  "institution": "SRH University",
+  "reportDate": "September 2026",
+  "waterTestDate": "2026-09-10",
+  "posterDate": "2026-09-14",
+  "sources": [
+    {
+      "id": "final-report",
+      "title": "Development of Low-Cost Water & Soil Sensor Systems",
+      "author": "Guilong Xiang",
+      "date": "September 2026",
+      "filename": "Development of Low Cost Water and Soil Sensor Systems.pdf",
+      "pages": 23
+    },
+    {
+      "id": "final-poster",
+      "title": "Final Poster_Guilong Xiang",
+      "filename": "Final Poster_Guilong Xiang.pdf",
+      "date": "2026-09-14",
+      "pages": 1
+    }
+  ],
+  "units": {
+    "ph": "pH",
+    "temperature": "°C",
+    "moisture": "%",
+    "ec": "µS/cm",
+    "tds": "ppm",
+    "turbidityVoltage": "V",
+    "turbidityNTU": "NTU"
+  },
+  "water": [
+    {
+      "id": "tap",
+      "name": "Tap water",
+      "system": {
+        "ph": 8.2,
+        "temperature": 25.1,
+        "tds": 215,
+        "turbidityVoltage": 5.0
+      },
+      "lab": {
+        "ph": 7.83,
+        "temperature": 24.9,
+        "tds": 291,
+        "turbidityNTU": 0.12
+      },
+      "tdsQualifier": "=",
+      "tdsAtLimit": false,
+      "tdsIncludedInReportedStatistics": true,
+      "sources": [
+        {
+          "source": "final-report",
+          "page": 10,
+          "table": 9
+        },
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 11
+        },
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 12
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "salt",
+      "name": "Tap water + salt",
+      "system": {
+        "ph": 7.55,
+        "temperature": 24.9,
+        "tds": 1400,
+        "turbidityVoltage": 5.0
+      },
+      "lab": {
+        "ph": 7.3,
+        "temperature": 24.7,
+        "tds": 1350,
+        "turbidityNTU": 0.87
+      },
+      "tdsQualifier": "=",
+      "tdsAtLimit": true,
+      "tdsIncludedInReportedStatistics": true,
+      "sources": [
+        {
+          "source": "final-report",
+          "page": 10,
+          "table": 9
+        },
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 11
+        },
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 12
+        }
+      ],
+      "notes": [
+        "The original report includes this 1400 ppm value in its five-pair TDS statistics. The firmware caps TDS at 1400 ppm, so this boundary value should be interpreted cautiously."
+      ]
+    },
+    {
+      "id": "river",
+      "name": "River water",
+      "system": {
+        "ph": 7.77,
+        "temperature": 23.4,
+        "tds": 437,
+        "turbidityVoltage": 5.0
+      },
+      "lab": {
+        "ph": 7.72,
+        "temperature": 23.5,
+        "tds": 469,
+        "turbidityNTU": 1.98
+      },
+      "tdsQualifier": "=",
+      "tdsAtLimit": false,
+      "tdsIncludedInReportedStatistics": true,
+      "sources": [
+        {
+          "source": "final-report",
+          "page": 10,
+          "table": 9
+        },
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 11
+        },
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 12
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "soda",
+      "name": "Soda water",
+      "system": {
+        "ph": 8.44,
+        "temperature": 24.3,
+        "tds": 188,
+        "turbidityVoltage": 5.0
+      },
+      "lab": {
+        "ph": 8.47,
+        "temperature": 24.1,
+        "tds": 241,
+        "turbidityNTU": 0.5
+      },
+      "tdsQualifier": "=",
+      "tdsAtLimit": false,
+      "tdsIncludedInReportedStatistics": true,
+      "sources": [
+        {
+          "source": "final-report",
+          "page": 10,
+          "table": 9
+        },
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 11
+        },
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 12
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "pepsi",
+      "name": "Pepsi",
+      "system": {
+        "ph": 2.54,
+        "temperature": 24.7,
+        "tds": 911,
+        "turbidityVoltage": 4.07
+      },
+      "lab": {
+        "ph": 2.79,
+        "temperature": 24.4,
+        "tds": 987,
+        "turbidityNTU": 2.34
+      },
+      "tdsQualifier": "=",
+      "tdsAtLimit": false,
+      "tdsIncludedInReportedStatistics": true,
+      "sources": [
+        {
+          "source": "final-report",
+          "page": 10,
+          "table": 9
+        },
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 11
+        },
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 12
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon water",
+      "system": {
+        "ph": 2.39,
+        "temperature": 24.9,
+        "tds": 1400,
+        "turbidityVoltage": 3.2
+      },
+      "lab": {
+        "ph": 2.8,
+        "temperature": 24.3,
+        "tds": 5080,
+        "turbidityNTU": 491
+      },
+      "tdsQualifier": ">=",
+      "tdsAtLimit": true,
+      "tdsIncludedInReportedStatistics": false,
+      "sources": [
+        {
+          "source": "final-report",
+          "page": 10,
+          "table": 9
+        },
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 11
+        },
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 12
+        }
+      ],
+      "notes": [
+        "Report Table 12 gives 3.20 V; the final poster Table 4 gives 4.20 V. This dataset preserves the report value and flags the conflict.",
+        "TDS is a lower bound, not a measured 1400 ppm concentration."
+      ]
+    }
+  ],
+  "soil": [
+    {
+      "id": "urban",
+      "name": "Urban soil",
+      "system": {
+        "temperature": 20.2,
+        "moisture": 43.4,
+        "ph": 6.6,
+        "ec": 90
+      },
+      "lab": {
+        "temperature": 20.5,
+        "moisture": 45,
+        "ph": 6.8,
+        "ec": 95
+      },
+      "sources": [
+        {
+          "source": "final-report",
+          "page": 7,
+          "table": 6
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "forest",
+      "name": "Forest soil",
+      "system": {
+        "temperature": 20.8,
+        "moisture": 23.1,
+        "ph": 9,
+        "ec": 0
+      },
+      "lab": {
+        "temperature": 20.2,
+        "moisture": 23.5,
+        "ph": 8.8,
+        "ec": 0
+      },
+      "sources": [
+        {
+          "source": "final-report",
+          "page": 7,
+          "table": 6
+        }
+      ],
+      "notes": [
+        "Zero EC is the recorded reading; it should not be interpreted as proof that the soil contains no ions."
+      ]
+    },
+    {
+      "id": "potted",
+      "name": "Potted soil",
+      "system": {
+        "temperature": 20.7,
+        "moisture": 19.3,
+        "ph": 4.8,
+        "ec": 0
+      },
+      "lab": {
+        "temperature": 21.1,
+        "moisture": 18.6,
+        "ph": 5,
+        "ec": 0
+      },
+      "sources": [
+        {
+          "source": "final-report",
+          "page": 7,
+          "table": 6
+        }
+      ],
+      "notes": [
+        "Zero EC is the recorded reading; it should not be interpreted as proof that the soil contains no ions."
+      ]
+    }
+  ],
+  "statistics": [
+    {
+      "system": "soil",
+      "parameter": "temperature",
+      "label": "Soil temperature",
+      "n": 3,
+      "unit": "°C",
+      "meanDifference": -0.03,
+      "mae": 0.43,
+      "rmse": 0.45,
+      "pValue": 0.926,
+      "result": "No statistically significant mean difference detected",
+      "source": {
+        "source": "final-report",
+        "page": 7,
+        "table": 7
+      }
+    },
+    {
+      "system": "soil",
+      "parameter": "moisture",
+      "label": "Soil moisture",
+      "n": 3,
+      "unit": "percentage points",
+      "meanDifference": -0.43,
+      "mae": 0.9,
+      "rmse": 1.03,
+      "pValue": 0.581,
+      "result": "No statistically significant mean difference detected",
+      "source": {
+        "source": "final-report",
+        "page": 7,
+        "table": 7
+      }
+    },
+    {
+      "system": "soil",
+      "parameter": "ph",
+      "label": "Soil pH",
+      "n": 3,
+      "unit": "pH units",
+      "meanDifference": -0.07,
+      "mae": 0.2,
+      "rmse": 0.2,
+      "pValue": 0.667,
+      "result": "No statistically significant mean difference detected",
+      "source": {
+        "source": "final-report",
+        "page": 7,
+        "table": 7
+      }
+    },
+    {
+      "system": "soil",
+      "parameter": "ec",
+      "label": "Soil EC",
+      "n": 3,
+      "unit": "µS/cm",
+      "meanDifference": -1.67,
+      "mae": 1.67,
+      "rmse": 2.89,
+      "pValue": 0.423,
+      "result": "No statistically significant mean difference detected",
+      "source": {
+        "source": "final-report",
+        "page": 7,
+        "table": 7
+      }
+    },
+    {
+      "system": "water",
+      "parameter": "ph",
+      "label": "Water pH",
+      "n": 6,
+      "unit": "pH units",
+      "meanDifference": -0.003,
+      "mae": 0.227,
+      "rmse": 0.269,
+      "pValue": 0.979,
+      "result": "No statistically significant mean difference detected",
+      "source": {
+        "source": "final-report",
+        "page": 10,
+        "table": 10
+      }
+    },
+    {
+      "system": "water",
+      "parameter": "temperature",
+      "label": "Water temperature",
+      "n": 6,
+      "unit": "°C",
+      "meanDifference": 0.233,
+      "mae": 0.267,
+      "rmse": 0.311,
+      "pValue": 0.052,
+      "result": "No statistically significant mean difference detected",
+      "source": {
+        "source": "final-report",
+        "page": 10,
+        "table": 10
+      }
+    },
+    {
+      "system": "water",
+      "parameter": "tds",
+      "label": "Water TDS",
+      "n": 5,
+      "unit": "ppm",
+      "meanDifference": -37.4,
+      "mae": 57.4,
+      "rmse": 59.8,
+      "pValue": 0.184,
+      "result": "No statistically significant mean difference detected",
+      "source": {
+        "source": "final-report",
+        "page": 10,
+        "table": 10
+      },
+      "pearsonR": 0.997
+    }
+  ],
+  "statisticalMethod": {
+    "test": "Two-sided paired t-test",
+    "alpha": 0.05,
+    "differenceDirection": "System minus laboratory",
+    "pairsPerSample": 1,
+    "description": "The three soil samples and six water samples are preliminary paired comparisons, not replicated validation across operating conditions. A p-value above 0.05 is not evidence of equivalence. Reported statistics were independently recalculated from the published values and agree to the displayed precision.",
+    "tdsInclusion": "Five pairs as in the report; lemon water excluded because its sensor result is censored. Salt water lies exactly at the firmware display ceiling.",
+    "source": {
+      "source": "final-poster",
+      "page": 1,
+      "section": "Statistical method"
+    }
+  },
+  "cost": {
+    "currency": "CNY",
+    "soilCore": 172.9,
+    "waterCore": 189.01,
+    "combinedCore": 361.91,
+    "combinedCoreEUR": 46.46,
+    "completeMaterials": 407.86,
+    "completeMaterialsEUR": 52.36,
+    "reportedCNYPerEUR": 7.79,
+    "exchangeRateDate": "2026-09-10",
+    "note": "Historical cost conversion as stated in the project report; not a current price quotation or independently verified exchange rate.",
+    "source": {
+      "source": "final-report",
+      "page": 4,
+      "table": 3
+    }
+  },
+  "bom": [
+    {
+      "item": "Nano-compatible ATmega328P board",
+      "quantity": 2,
+      "costCNY": 19,
+      "approxEUR": 2.44,
+      "system": "Both",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    },
+    {
+      "item": "7 × 9 cm perfboard",
+      "quantity": 2,
+      "costCNY": 3.25,
+      "approxEUR": 0.42,
+      "system": "Both",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    },
+    {
+      "item": "0.96-inch OLED, 128 × 64",
+      "quantity": 2,
+      "costCNY": 15.94,
+      "approxEUR": 2.05,
+      "system": "Both",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    },
+    {
+      "item": "TTL-RS485 automatic-direction converter",
+      "quantity": 1,
+      "costCNY": 15.8,
+      "approxEUR": 2.03,
+      "system": "Soil",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    },
+    {
+      "item": "RS485 four-in-one soil probe",
+      "quantity": 1,
+      "costCNY": 138,
+      "approxEUR": 17.72,
+      "system": "Soil",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    },
+    {
+      "item": "DHT11 ambient sensor",
+      "quantity": 1,
+      "costCNY": 6.04,
+      "approxEUR": 0.78,
+      "system": "Water",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    },
+    {
+      "item": "Waterproof DS18B20 probe",
+      "quantity": 1,
+      "costCNY": 6.56,
+      "approxEUR": 0.84,
+      "system": "Water",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    },
+    {
+      "item": "TDS analogue module",
+      "quantity": 1,
+      "costCNY": 41.31,
+      "approxEUR": 5.3,
+      "system": "Water",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    },
+    {
+      "item": "Turbidity sensor and module",
+      "quantity": 1,
+      "costCNY": 32,
+      "approxEUR": 4.11,
+      "system": "Water",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    },
+    {
+      "item": "Serial pH module and electrode",
+      "quantity": 1,
+      "costCNY": 84,
+      "approxEUR": 10.78,
+      "system": "Water",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    },
+    {
+      "item": "pH 4.00, 6.86 and 9.18 buffer set",
+      "quantity": "1 set",
+      "costCNY": 25.75,
+      "approxEUR": 3.31,
+      "system": "Calibration",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    },
+    {
+      "item": "Solder",
+      "quantity": "1 roll",
+      "costCNY": 14.6,
+      "approxEUR": 1.87,
+      "system": "Construction",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    },
+    {
+      "item": "Headers and connector sockets",
+      "quantity": "Several",
+      "costCNY": 5.6,
+      "approxEUR": 0.72,
+      "system": "Construction",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    }
+  ],
+  "calibration": {
+    "phBuffers": [
+      4.0,
+      6.86,
+      9.18
+    ],
+    "procedure": "Calibrate the pH electrode with acidic, near-neutral and alkaline standard buffers; rinse the electrode between solutions.",
+    "source": {
+      "source": "final-report",
+      "page": 9
+    },
+    "waterTestAmbient": {
+      "temperatureApproxC": 27,
+      "relativeHumidityApproxPercent": 45
+    },
+    "tds": "30 ADC samples; median filter; temperature compensation referenced to 25 °C; cubic conversion; maximum displayed value 1400 ppm.",
+    "turbidity": "Voltage only. No completed voltage-to-NTU calibration."
+  },
+  "hardware": {
+    "shared": {
+      "controller": "Arduino Nano-compatible ATmega328P",
+      "construction": "New soldered perfboard builds",
+      "display": "0.96-inch SSD1306 OLED, 128 × 64",
+      "power": "USB",
+      "source": {
+        "source": "final-report",
+        "page": 3
+      }
+    },
+    "soil": {
+      "probe": "SN-3001-TR four-in-one RS485 probe",
+      "outputs": [
+        "Temperature",
+        "Moisture",
+        "pH",
+        "Electrical conductivity"
+      ],
+      "interface": "Modbus RTU over TTL-RS485 automatic-direction converter",
+      "baud": 4800,
+      "address": 1,
+      "function": "0x03",
+      "registers": [
+        {
+          "address": "0x0000",
+          "quantity": "Moisture",
+          "scale": 0.1,
+          "unit": "%"
+        },
+        {
+          "address": "0x0001",
+          "quantity": "Signed temperature",
+          "scale": 0.1,
+          "unit": "°C"
+        },
+        {
+          "address": "0x0002",
+          "quantity": "Electrical conductivity",
+          "scale": 1,
+          "unit": "µS/cm"
+        },
+        {
+          "address": "0x0003",
+          "quantity": "pH",
+          "scale": 0.1,
+          "unit": "pH"
+        }
+      ],
+      "pins": [
+        {
+          "component": "TTL-RS485 TXD",
+          "pin": "D8",
+          "role": "Software serial RX"
+        },
+        {
+          "component": "TTL-RS485 RXD",
+          "pin": "D9",
+          "role": "Software serial TX"
+        },
+        {
+          "component": "OLED SDA",
+          "pin": "A4",
+          "role": "I2C data"
+        },
+        {
+          "component": "OLED SCL",
+          "pin": "A5",
+          "role": "I2C clock"
+        }
+      ],
+      "source": {
+        "source": "final-report",
+        "page": 6,
+        "table": 5
+      }
+    },
+    "water": {
+      "outputs": [
+        "Air temperature",
+        "Air relative humidity",
+        "Water temperature",
+        "pH",
+        "TDS",
+        "Turbidity voltage"
+      ],
+      "pins": [
+        {
+          "component": "DHT11",
+          "pin": "D2",
+          "role": "Digital data"
+        },
+        {
+          "component": "DS18B20",
+          "pin": "D3",
+          "role": "One-wire data; 4.7 kΩ pull-up to 5 V"
+        },
+        {
+          "component": "TDS module",
+          "pin": "A0",
+          "role": "Analogue input"
+        },
+        {
+          "component": "Turbidity module",
+          "pin": "A1",
+          "role": "Analogue input"
+        },
+        {
+          "component": "pH serial module",
+          "pin": "D8 / D9",
+          "role": "Software serial at 9600 baud; RX/TX orientation auto-swapped after timeout"
+        },
+        {
+          "component": "OLED SDA",
+          "pin": "A4",
+          "role": "I2C data"
+        },
+        {
+          "component": "OLED SCL",
+          "pin": "A5",
+          "role": "I2C clock"
+        }
+      ],
+      "source": {
+        "source": "final-report",
+        "page": 8,
+        "table": 8
+      }
+    }
+  },
+  "development": [
+    {
+      "phase": "Milestone",
+      "water": "Arduino Uno, DHT22, DS18B20, analogue pH and analogue TDS; serial-monitor output.",
+      "soil": "Arduino Uno, DS18B20, capacitive moisture, RS485 pH and soil-water-extract TDS; serial-monitor output.",
+      "source": {
+        "source": "final-report",
+        "page": 3,
+        "table": 1
+      }
+    },
+    {
+      "phase": "Final rebuild",
+      "description": "Two new Nano-compatible soldered boards, each with an OLED. Soil sensing consolidated into a four-in-one RS485 probe; water system added turbidity voltage.",
+      "source": {
+        "source": "final-report",
+        "page": 3
+      }
+    },
+    {
+      "phase": "Calibration and testing",
+      "description": "pH calibrated with three buffers. Final soil system compared on three soils; final water system compared on six samples.",
+      "sources": [
+        {
+          "source": "final-report",
+          "page": 6
+        },
+        {
+          "source": "final-report",
+          "page": 7
+        },
+        {
+          "source": "final-report",
+          "page": 9
+        }
+      ]
+    },
+    {
+      "phase": "Documentation",
+      "description": "Final report with complete firmware, wiring, costs and paired results, plus a final research poster.",
+      "sources": [
+        {
+          "source": "final-report"
+        },
+        {
+          "source": "final-poster"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    {
+      "title": "TDS ceiling",
+      "description": "The low-cost channel is capped at 1400 ppm. Lemon water is recorded as ≥1400 ppm; its laboratory value is 5080 ppm.",
+      "source": {
+        "source": "final-report",
+        "page": 11
+      }
+    },
+    {
+      "title": "Uncalibrated turbidity",
+      "description": "The system reports sensor voltage, not NTU. Colour and optical attenuation affect the signal; no NTU accuracy claim is supported.",
+      "source": {
+        "source": "final-report",
+        "page": 11
+      }
+    },
+    {
+      "title": "Small comparison set",
+      "description": "One paired measurement per sample; three soils and six water samples. Reported non-significant p-values do not establish equivalence.",
+      "source": {
+        "source": "final-poster",
+        "page": 1,
+        "section": "Statistical method"
+      }
+    },
+    {
+      "title": "No live connection",
+      "description": "Website values replay the published September 2026 measurements; they are not streaming sensor data."
+    }
+  ],
+  "discrepancies": [
+    {
+      "id": "lemon-turbidity",
+      "severity": "source conflict",
+      "description": "Lemon-water turbidity voltage differs between final artifacts. Report Table 12: 3.20 V; final poster Table 4: 4.20 V. The website dataset preserves the report value and exposes this conflict.",
+      "reportValue": 3.2,
+      "posterValue": 4.2,
+      "unit": "V",
+      "sources": [
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 12
+        },
+        {
+          "source": "final-poster",
+          "page": 1,
+          "table": 4
+        }
+      ]
+    },
+    {
+      "id": "tds-boundary",
+      "severity": "interpretation",
+      "description": "The report describes the first five TDS pairs as uncensored and includes salt-water output of 1400 ppm; the original firmware clamps any larger result to 1400. Preserve the original reported statistics, but do not describe the salt boundary value as conclusively uncensored.",
+      "sources": [
+        {
+          "source": "final-report",
+          "page": 11,
+          "table": 11
+        },
+        {
+          "source": "final-report",
+          "page": 21
+        }
+      ]
+    },
+    {
+      "id": "bom-rounding",
+      "severity": "rounding",
+      "description": "The ten displayed core-hardware line items sum to CNY 361.90, while the reported combined core total is CNY 361.91. Overall displayed material rows sum to CNY 407.85 versus reported CNY 407.86. Original reported totals are retained; the difference is CNY 0.01.",
+      "source": {
+        "source": "final-report",
+        "page": 4,
+        "table": 3
+      }
+    },
+    {
+      "id": "firmware-censor-label",
+      "severity": "implementation detail",
+      "description": "The PDF narrative describes over-range indication, but the archived sketch clamps TDS numerically and prints 1400 without a ≥ marker. The website uses the report’s ≥1400 notation for the lemon-water record.",
+      "sources": [
+        {
+          "source": "final-report",
+          "page": 11
+        },
+        {
+          "source": "final-report",
+          "page": 21
+        },
+        {
+          "source": "final-report",
+          "page": 22
+        }
+      ]
+    }
+  ],
+  "firmware": {
+    "soil": {
+      "file": "downloads/soil-system.ino",
+      "originalName": "turang.ino",
+      "numberedLines": 316
+    },
+    "water": {
+      "file": "downloads/water-system.ino",
+      "originalName": "shui.ino",
+      "numberedLines": 552
+    }
+  }
+}
