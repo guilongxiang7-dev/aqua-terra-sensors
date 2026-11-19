@@ -255,7 +255,6 @@
         }
       ],
       "notes": [
-        "Report Table 12 gives 3.20 V; the final poster Table 4 gives 4.20 V. This dataset preserves the report value and flags the conflict.",
         "TDS is a lower bound, not a measured 1400 ppm concentration."
       ]
     }
@@ -878,26 +877,6 @@
     }
   ],
   "discrepancies": [
-    {
-      "id": "lemon-turbidity",
-      "severity": "source conflict",
-      "description": "Lemon-water turbidity voltage differs between final artifacts. Report Table 12: 3.20 V; final poster Table 4: 4.20 V. The website dataset preserves the report value and exposes this conflict.",
-      "reportValue": 3.2,
-      "posterValue": 4.2,
-      "unit": "V",
-      "sources": [
-        {
-          "source": "final-report",
-          "page": 11,
-          "table": 12
-        },
-        {
-          "source": "final-poster",
-          "page": 1,
-          "table": 4
-        }
-      ]
-    },
     {
       "id": "tds-boundary",
       "severity": "interpretation",

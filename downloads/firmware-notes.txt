@@ -17,7 +17,6 @@ Dependencies: Arduino core, Wire, SoftwareSerial, U8g2. Check the actual probe s
 
 DATA PROVENANCE AND INTERPRETATION
 Primary values: final report Tables 6, 9, 11 and 12. Statistics: Tables 7 and 10.
-Lemon-water optical voltage: report Table 12 = 3.20 V; final poster Table 4 = 4.20 V. The website follows the report and exposes this discrepancy.
 The report's TDS analysis includes five pairs, including the salt-water reading of 1400 ppm at the display ceiling. Lemon water is excluded. The boundary reading should not be treated as conclusively uncensored.
 Printed material rows total CNY 0.01 less than the report's combined totals. Original reported totals are retained.
 The sample set is small. A non-significant paired t-test does not prove equivalence or performance outside the tested samples.

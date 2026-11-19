@@ -4,4 +4,4 @@ Tap water + salt,7.55,7.3,24.9,24.7,1400,=,1350,5.0,0.87,True,True,"Final report
 River water,7.77,7.72,23.4,23.5,437,=,469,5.0,1.98,False,True,"Final report, September 2026, p10 Table9 and p11 Tables11-12",
 Soda water,8.44,8.47,24.3,24.1,188,=,241,5.0,0.5,False,True,"Final report, September 2026, p10 Table9 and p11 Tables11-12",
 Pepsi,2.54,2.79,24.7,24.4,911,=,987,4.07,2.34,False,True,"Final report, September 2026, p10 Table9 and p11 Tables11-12",
-Lemon water,2.39,2.8,24.9,24.3,1400,>=,5080,3.2,491,True,False,"Final report, September 2026, p10 Table9 and p11 Tables11-12","Report Table 12 gives 3.20 V; the final poster Table 4 gives 4.20 V. This dataset preserves the report value and flags the conflict. TDS is a lower bound, not a measured 1400 ppm concentration."
+Lemon water,2.39,2.8,24.9,24.3,1400,>=,5080,3.2,491,True,False,"Final report, September 2026, p10 Table9 and p11 Tables11-12","TDS is a lower bound, not a measured 1400 ppm concentration."
